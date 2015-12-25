@@ -11,7 +11,7 @@ set -o pipefail
 
 #source ./settings
 
-for b in base gtm gtm_proxy coordinator datanode; do
+for b in base gtm coordinator datanode; do
   cd ${b}/
   docker build -t postgres-x2_${b} .
   cd ..
